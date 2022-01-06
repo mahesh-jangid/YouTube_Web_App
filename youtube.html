@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Youtube</title>
+    <link
+      rel="shortcut icon"
+      href="https://www.youtube.com/s/desktop/4aac258c/img/favicon.ico"
+      type="image/x-icon"
+    />
+    <link
+      rel="icon"
+      href="https://www.youtube.com/s/desktop/4aac258c/img/favicon_32.png"
+      sizes="32x32"
+    />
+    <link
+      rel="icon"
+      href="https://www.youtube.com/s/desktop/4aac258c/img/favicon_48.png"
+      sizes="48x48"
+    />
+    <link
+      rel="icon"
+      href="https://www.youtube.com/s/desktop/4aac258c/img/favicon_96.png"
+      sizes="96x96"
+    />
+    <link
+      rel="icon"
+      href="https://www.youtube.com/s/desktop/4aac258c/img/favicon_144.png"
+      sizes="144x144"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+      integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./assets/css/index.css" />
+    <link rel="stylesheet" href="./assets/css/youtube.css" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <div class="left">
+          <div class="hamburger-menu-icon">
+            <i class="fas fa-bars"></i>
+          </div>
+          <div class="logo">
+            <i class="fab fa-youtube"></i>
+          </div>
+        </div>
+        <div class="center">
+          <div class="search">
+            <div class="previous">
+              <i class="fa fa-arrow-left"></i>
+            </div>
+            <input type="text" id="video" placeholder="search here..." />
+            <button type="submit" onclick="searchVideo()">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+        </div>
+        <div class="right">
+          <div class="container">
+            <ul class="nav-links">
+              <li>
+                <i class="fas fa-video"></i>
+              </li>
+              <li>
+                <i class="fas fa-th"></i>
+              </li>
+              <li>
+                <i class="fas fa-bell"></i>
+              </li>
+            </ul>
+            <div class="profile">
+              <img
+                src="https://lh3.googleusercontent.com/a-/AOh14GgRr9IbsAC1jU7uz4VibJpD-NjIZGI93vXqSDUZMQ=s88-c-k-c0x00ffffff-no-rj-mo"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div id="main">
+      <div id="video_details">
+        <!-- <div class="video_info">
+          <div class="video-heading">
+            <div class="video-title">
+              Eleni Vitali - Gramma Kai Grafi (English, Turkish Lyrics)
+            </div>
+            <div class="dots">
+              <i class="fa fa-ellipsis-v"></i>
+            </div>
+          </div>
+          <div class="video-details">
+            <div class="channel">
+              <span class="channel-name">Dünyadan Sesler </span>
+              <span class="views-number">4,1 Mn görüntüleme</span>
+              <span class="release-date">7 yıl önce</span>
+            </div>
+          </div>
+        </div> -->
+        <!-- <div class="grid-item">
+          <div class="video-img">
+            <img
+              src="https://i.ytimg.com/vi/8rDV3WDnCKw/hqdefault.jpg?sqp=-oaymwEZCOADEI4CSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLCMSoVw1iOzfsL4IiSnidG4l5gDHw"
+              alt=""
+            />
+            <span class="time">04:12</span>
+          </div>
+          <div class="video-heading">
+            <div class="video-creator">
+              <div class="video-creator-img">
+                <img
+                  src="https://yt3.ggpht.com/a-/AOh14Ggp32ojA3Yot9a7El6RHh72heaPm4Ilr9eEEA=s68-c-k-c0x00ffffff-no-rj-mo"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="video-title">
+              Eleni Vitali - Gramma Kai Grafi (English, Turkish Lyrics)
+            </div>
+            <div class="dots">
+              <i class="fa fa-ellipsis-v"></i>
+            </div>
+          </div>
+          <div class="video-details">
+            <div class="temp"></div>
+            <div class="channel">
+              <span class="channel-name">Dünyadan Sesler </span>
+              <span class="views-number">4,1 Mn görüntüleme</span>
+              <span class="release-date">7 yıl önce</span>
+            </div>
+          </div>
+        </div> -->
+      </div>
+      <div id="recommendation">
+        <h3>Recommended</h3>
+        <hr />
+        <div class="wrapper">
+          <!-- <div class="recommend_videos">
+            <img
+              src="https://i.ytimg.com/vi/8rDV3WDnCKw/hqdefault.jpg?sqp=-oaymwEZCOADEI4CSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLCMSoVw1iOzfsL4IiSnidG4l5gDHw"
+              class="img"
+              alt=""
+            />
+            <div class="info">
+              <div class="video-title">
+                Eleni Vitali - Gramma Kai Grafi (English, Turkish Lyrics)
+              </div>
+              <span class="channel-name">Dünyadan Sesler </span>
+            </div>
+          </div>
+          <div class="recommend_videos">
+            <img
+              src="https://i.ytimg.com/vi/8rDV3WDnCKw/hqdefault.jpg?sqp=-oaymwEZCOADEI4CSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLCMSoVw1iOzfsL4IiSnidG4l5gDHw"
+              class="img"
+              alt=""
+            />
+            <div class="info">
+              <div class="video-title">
+                Eleni Vitali - Gramma Kai Grafi (English, Turkish Lyrics)
+              </div>
+              <span class="channel-name">Dünyadan Sesler </span>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="./scripts/js/youtube.js"></script>
+</html>

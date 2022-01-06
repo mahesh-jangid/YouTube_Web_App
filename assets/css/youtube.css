@@ -1,0 +1,114 @@
+    #main {
+        display: flex;
+        gap: 3rem;
+        height: 516px;
+        margin-top: 5rem;
+        padding: 1rem 6rem;
+    }
+
+    #video_details {
+            flex-basis: 80%;
+    }
+
+    #recommendation {
+        flex-basis: 28%;
+        border: 1px solid black;
+        height: 579px;
+
+    }
+
+    #recommendation h3 {
+        padding: 1.4rem 2rem;
+        font-size: 16px;
+    }
+
+    .video-heading {
+            padding: 0.7rem 2.2em;
+    }
+
+    .video-heading .dots {
+        margin-left: 0.5rem;
+        opacity: 0;
+        visibility: hidden;
+        -webkit-transition: opacity 100ms, visibility 100ms;
+        transition: opacity 100ms, visibility 100ms;
+    }
+
+    .dots i {
+        font-size: 1rem;
+        cursor: pointer;
+        color: var(--paper-blue-grey-500);
+    }
+
+   #video_details:hover .dots {
+       visibility: visible;
+       opacity: 1;
+   }
+
+    .video-title {
+        flex: 4;
+        max-height: 2.5rem;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        color: var(--color-03);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: normal;
+        -webkit-line-clamp: 2;
+        letter-spacing: var(--yt-link-letter-spacing, normal);
+        font-size: 0.9rem;
+        font-weight: 500;
+        line-height: 1.2rem;
+    }
+
+    .video-details {
+              margin-top: -0.3rem;
+              margin-left: 1.45rem;
+    }
+
+.video_info {
+    padding-bottom: 30px;
+}
+
+    .video-details .channel {
+        flex: 4;
+        max-height: 3rem;
+    }
+
+    .video-details span {
+        flex: 4;
+        color: var(--paper-blue-grey-700);
+        font-size: 0.9rem;
+        font-weight: 100;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-box-orient: vertical;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 1;
+    }
+.wrapper {
+        scroll-behavior: smooth;
+        overflow: auto;
+        height: 510px;
+}
+    .recommend_videos{
+            display: flex;
+            align-items: center;
+            padding: 0.2rem 0.5rem;
+            margin-top: 17px;
+            gap: 20px;
+        
+            }    
+    img{
+            width: 93px;
+            height: auto;
+            }
+            .video-title {
+                font-size: 11px;
+               
+            }
+   span.channel-name {
+       font-size: 9px;
+   }

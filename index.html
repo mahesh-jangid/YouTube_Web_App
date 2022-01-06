@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Youtube</title>
+    <link
+      rel="shortcut icon"
+      href="https://www.youtube.com/s/desktop/4aac258c/img/favicon.ico"
+      type="image/x-icon"
+    />
+    <link
+      rel="icon"
+      href="https://www.youtube.com/s/desktop/4aac258c/img/favicon_32.png"
+      sizes="32x32"
+    />
+    <link
+      rel="icon"
+      href="https://www.youtube.com/s/desktop/4aac258c/img/favicon_48.png"
+      sizes="48x48"
+    />
+    <link
+      rel="icon"
+      href="https://www.youtube.com/s/desktop/4aac258c/img/favicon_96.png"
+      sizes="96x96"
+    />
+    <link
+      rel="icon"
+      href="https://www.youtube.com/s/desktop/4aac258c/img/favicon_144.png"
+      sizes="144x144"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+      integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./assets/css/index.css" />
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <div class="left">
+          <div class="hamburger-menu-icon">
+            <i class="fas fa-bars"></i>
+          </div>
+          <div class="logo">
+            <i class="fab fa-youtube"></i>
+          </div>
+        </div>
+        <div class="center">
+          <div class="search">
+            <div class="previous">
+              <i class="fa fa-arrow-left"></i>
+            </div>
+            <input type="text" id="video" placeholder="search here..." />
+            <button type="submit" onclick="searchVideo()">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+        </div>
+        <div class="right">
+          <div class="container">
+            <ul class="nav-links">
+              <li>
+                <i class="fas fa-video"></i>
+              </li>
+              <li>
+                <i class="fas fa-th"></i>
+              </li>
+              <li>
+                <i class="fas fa-bell"></i>
+              </li>
+            </ul>
+            <div class="profile">
+              <img src="./images/user_profile.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="sidebar">
+        <div class="main-links">
+          <ul>
+            <li class="active">
+              <div class="item-icon">
+                <i class="fa fa-home"></i>
+              </div>
+              <div class="item-title">
+                <span>Home</span>
+              </div>
+            </li>
+            <li>
+              <div class="item-icon">
+                <i class="fas fa-fire"></i>
+              </div>
+              <div class="item-title">
+                <span>Trending</span>
+              </div>
+            </li>
+            <li>
+              <div class="item-icon">
+                <i class="fab fa-youtube-square"></i>
+              </div>
+              <div class="item-title">
+                <span>Subscription</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="sub-main-links">
+          <ul>
+            <li>
+              <div class="item-icon">
+                <i class="fas fa-photo-video"></i>
+              </div>
+              <div class="item-title">
+                <span>Library</span>
+              </div>
+            </li>
+            <li>
+              <div class="item-icon">
+                <i class="fa fa-history"></i>
+              </div>
+              <div class="item-title">
+                <span>History</span>
+              </div>
+            </li>
+            <li>
+              <div class="item-icon">
+                <i class="fa fa-play-circle"></i>
+              </div>
+              <div class="item-title">
+                <span>Your Videos</span>
+              </div>
+            </li>
+            <li>
+              <div class="item-icon">
+                <i class="fas fa-clock"></i>
+              </div>
+              <div class="item-title">
+                <span>Watch Later</span>
+              </div>
+            </li>
+            <li>
+              <div class="item-icon">
+                <i class="fa fa-thumbs-up"></i>
+              </div>
+              <div class="item-title">
+                <span>Liked Videos</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="subscriptions-links">
+          <div class="heading-title">SUBSCRIPTIONS</div>
+          <ul>
+            <li>
+              <div class="channel-logo">
+                <img
+                  src="https://yt3.ggpht.com/a/AATXAJxJq4h8fzevclOrsdXPEZNZGhBjS_J8CYprfvInmw=s88-c-k-c0xffffffff-no-rj-mo"
+                  alt=""
+                />
+              </div>
+              <div class="item-title live">
+                <span>FreeCodeCamp.org</span>
+                <i class="fa fa-podcast"></i>
+              </div>
+            </li>
+            <li>
+              <div class="channel-logo">
+                <img
+                  src="https://yt3.ggpht.com/a/AATXAJywsr1EqZJfqSRVM9kmx7thihwsNJBNRarA-h1xZQ=s88-c-k-c0xffffffff-no-rj-mo"
+                  alt=""
+                />
+              </div>
+              <div class="item-title live">
+                <span>Study With Flow</span>
+                <i class="fa fa-podcast"></i>
+              </div>
+            </li>
+            <li>
+              <div class="channel-logo">
+                <img
+                  src="https://yt3.ggpht.com/a-/AOh14GhqOT2rmcUlS-pOBQeg8m4GCYTXT87VKNoyyg=s68-c-k-c0x00ffffff-no-rj-mo"
+                  alt=""
+                />
+              </div>
+              <div class="item-title newness-dot">
+                <span>Dev Ed</span>
+                <i class="fas fa-circle"></i>
+              </div>
+            </li>
+            <li>
+              <div class="channel-logo">
+                <img
+                  src="https://yt3.ggpht.com/a/AATXAJwtjRbBRxYOFs8UigC1pYDGV0JhJqE2CuYTOaCWpA=s88-c-k-c0xffffffff-no-rj-mo"
+                  alt=""
+                />
+              </div>
+              <div class="item-title newness-dot">
+                <span>BBC Earth</span>
+                <i class="fas fa-circle"></i>
+              </div>
+            </li>
+            <li>
+              <div class="channel-logo">
+                <img
+                  src="https://yt3.ggpht.com/a/AATXAJxSkEEZNYYB9FAy6JfZ7gRvvte0qlP5Tm58AU01yA=s88-c-k-c0xffffffff-no-rj-mo"
+                  alt=""
+                />
+              </div>
+              <div class="item-title">
+                <span>Google Developers</span>
+              </div>
+            </li>
+            <li>
+              <div class="channel-logo">
+                <img
+                  src="https://yt3.ggpht.com/a/AATXAJyXCEtzW9oCxl80Tpp_9a27o5YLCu3wdCoSY_yxs3o=s88-c-k-c0xffffffff-no-rj-mo"
+                  alt=""
+                />
+              </div>
+              <div class="item-title">
+                <span>Nerd's Lesson</span>
+              </div>
+            </li>
+            <li>
+              <div class="channel-logo">
+                <img
+                  src="https://yt3.ggpht.com/a/AATXAJw6_grkg9oR0LjPU5weHdVMOSt5T7kzzocSSDQP1A=s88-c-k-c0xffffffff-no-rj-mo"
+                  alt=""
+                />
+              </div>
+              <div class="item-title">
+                <span>TeckMart Influencer</span>
+              </div>
+            </li>
+            <li>
+              <div class="item-icon">
+                <i class="fa fa-chevron-down" aria-hidden="true"></i>
+              </div>
+              <div class="item-title">
+                <span> Show 12 more</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="more-links">
+          <div class="heading-title">More From YouTube</div>
+          <ul>
+            <li>
+              <div class="item-icon">
+                <i class="fab fa-youtube"></i>
+              </div>
+              <div class="item-title">
+                <span>Youtube Premium</span>
+              </div>
+            </li>
+            <li>
+              <div class="item-icon">
+                <i class="fa fa-gamepad" aria-hidden="true"></i>
+              </div>
+              <div class="item-title">
+                <span>Gaming</span>
+              </div>
+            </li>
+            <li>
+              <div class="item-icon">
+                <i class="fa fa-podcast" aria-hidden="true"></i>
+              </div>
+              <div class="item-title">
+                <span>Live</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="settings-links">
+          <ul>
+            <li>
+              <div class="item-icon">
+                <i class="fa fa-cog" aria-hidden="true"></i>
+              </div>
+              <div class="item-title">
+                <span>Setting</span>
+              </div>
+            </li>
+            <li>
+              <div class="item-icon">
+                <i class="fas fa-flag"></i>
+              </div>
+              <div class="item-title">
+                <span>Report History</span>
+              </div>
+            </li>
+            <li>
+              <div class="item-icon">
+                <i class="fas fa-question-circle"></i>
+              </div>
+              <div class="item-title">
+                <span>Help</span>
+              </div>
+            </li>
+            <li>
+              <div class="item-icon">
+                <i class="fas fa-comment-alt"></i>
+              </div>
+              <div class="item-title">
+                <span>Send Feedback</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <ul>
+            <li>
+              <a href="#">About</a>
+            </li>
+            <li>
+              <a href="#">Press</a>
+            </li>
+            <li>
+              <a href="#">Copyright</a>
+            </li>
+            <li>
+              <a href="#">Contact us</a>
+            </li>
+            <li>
+              <a href="#">Creator</a>
+            </li>
+            <li>
+              <a href="#">AdvertiseDevelopers</a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="#">Terms</a>
+            </li>
+            <li>
+              <a href="#">PrivacyPolicy & SafetyHow</a>
+            </li>
+            <li>
+              <a href="#">YouTube</a>
+            </li>
+            <li>
+              <a href="#">worksTest</a>
+            </li>
+            <li>
+              <a href="#">new features</a>
+            </li>
+          </ul>
+          <p>© 2020 Google LLC</p>
+        </div>
+
+        <!-- -----------------------------------section start---------------------------------- -->
+      </section>
+
+      <section class="content">
+        <div class="navigator_cont">
+          <button>All</button>
+          <button>Mixes</button>
+          <button>Music</button>
+          <button>Website</button>
+          <button>UX Design</button>
+          <button>Grafic Design</button>
+          <button>Hollywood</button>
+        </div>
+        <div class="container">
+          <div class="grid">
+            <!-- <div class="grid-item">
+              <div class="video-img">
+                <img
+                  src="https://i.ytimg.com/vi/8rDV3WDnCKw/hqdefault.jpg?sqp=-oaymwEZCOADEI4CSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLCMSoVw1iOzfsL4IiSnidG4l5gDHw"
+                  alt=""
+                />
+                <span class="time">04:12</span>
+              </div>
+              <div class="video-heading">
+                <div class="video-creator">
+                  <div class="video-creator-img">
+                    <img
+                      src="https://yt3.ggpht.com/a-/AOh14Ggp32ojA3Yot9a7El6RHh72heaPm4Ilr9eEEA=s68-c-k-c0x00ffffff-no-rj-mo"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="video-title">
+                  Eleni Vitali - Gramma Kai Grafi (English, Turkish Lyrics)
+                </div>
+                <div class="dots">
+                  <i class="fa fa-ellipsis-v"></i>
+                </div>
+              </div>
+              <div class="video-details">
+                <div class="temp"></div>
+                <div class="channel">
+                  <span class="channel-name">Dünyadan Sesler </span>
+                  <span class="views-number">4,1 Mn görüntüleme</span>
+                  <span class="release-date">7 yıl önce</span>
+                </div>
+              </div>
+            </div> -->
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="./scripts/js/index.js"></script>
+  </body>
+</html>
