@@ -30,7 +30,7 @@ async function searchVideo() {
     let video_query = document.querySelector("#video").value;
     localStorage.setItem("serchVideos", JSON.stringify(video_query));
     let res = await fetch(
-      `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=50&order=date&q=${video_query}&type=video&videoEmbeddable=true&key=AIzaSyAO2UEuSKXxJpTQiI4PtD2zjrAbJqcYTHY`
+      `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=50&order=date&q=${video_query}&type=video&videoEmbeddable=true&key=AIzaSyACKuYzW8wJahXVIr9EQFp7sWUgQpbaoqU`
     );
     let data = await res.json();
     let videos = data.items;
