@@ -50,7 +50,7 @@ async function RecommendedVideos(getSearch) {
   try {
     // let video_query = document.querySelector("#video").value;
     let res = await fetch(
-      `https://youtube.googleapis.com/youtube/v3/search?part=snippet&q=${getSearch}&maxResults=50&order=date&type=video&videoEmbeddable=true&key=AIzaSyAO2UEuSKXxJpTQiI4PtD2zjrAbJqcYTHY`
+      `https://youtube.googleapis.com/youtube/v3/search?part=snippet&q=${getSearch}&maxResults=50&order=date&type=video&videoEmbeddable=true&key=AIzaSyDh4RydSIW0FgVNWny6t7_Bmki8FRB84xk`
     );
 
     let data = await res.json();
