@@ -878,17 +878,19 @@ section .container {
     margin-bottom: 2rem;
     border-left: none;
     border-right: none;
+        background-color: #8080800d;
 }
 .navigator_cont button {
         padding: 0.5rem 1rem;
         margin: 0 .8rem;
-        min-width: 130px;
+        min-width: 120px;
         height: auto;
         border-radius: 22px;
         cursor: pointer;
         transition: all .5s ease-in;
         font-size: 12px;
         font-weight: bold;
+        background-color: #faf1f10d;
 }
 .navigator_cont button:hover {
     background-color: rgb(83, 78, 78);

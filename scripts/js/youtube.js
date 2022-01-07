@@ -4,18 +4,23 @@ const {
 } = JSON.parse(localStorage.getItem("clickedVideos"));
 
 const video_DOM = document.querySelector("#video_details");
+// window.onload = (videoId, channelTitle, title) => {
+//   showVideo(videoId, channelTitle, title);
+// };
+// video_DOM.addEventListener("");
+function showVideo(videoId, channelTitle, title) {
+  video_DOM.innerHTML = "";
+  let iframe = document.createElement("iframe");
+  iframe.src = `https://www.youtube.com/embed/${videoId}`;
 
-let iframe = document.createElement("iframe");
-iframe.src = `https://www.youtube.com/embed/${videoId}`;
+  iframe.width = "100%";
+  iframe.height = "100%";
+  iframe.setAttribute("allowfullscreen", "true");
 
-iframe.width = "100%";
-iframe.height = "100%";
-iframe.setAttribute("allowfullscreen", "true");
+  let video_info = document.createElement("div");
+  video_info.classList.add("video_info");
 
-let video_info = document.createElement("div");
-video_info.classList.add("video_info");
-
-let videoOtherHtml = `  <div class="video_info">
+  let videoOtherHtml = `  <div class="video_info">
           <div class="video-heading">
             <div class="video-title">
               ${title}
@@ -26,23 +31,26 @@ let videoOtherHtml = `  <div class="video_info">
           </div>
           <div class="video-details">
             <div class="channel">
-              <span class="channel-name">${channelTitle}</span>
+              <span class="channelTitle">${channelTitle}</span>
             </div>
           </div>
         </div>
         <hr>`;
-video_info.insertAdjacentHTML("afterbegin", videoOtherHtml);
-video_DOM.append(iframe, video_info);
+  video_info.insertAdjacentHTML("afterbegin", videoOtherHtml);
+  video_DOM.append(iframe, video_info);
+}
 
 // -------------------------------------------Recommended Videos----------------------------------------------------/////
+let getSearch = JSON.parse(localStorage.getItem("serchVideos"));
 window.onload = () => {
-  RecommendedVideos();
+  RecommendedVideos(getSearch);
+  showVideo(videoId, channelTitle, title);
 };
-async function RecommendedVideos() {
+async function RecommendedVideos(getSearch) {
   try {
     // let video_query = document.querySelector("#video").value;
     let res = await fetch(
-      `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=50&order=date&type=video&videoEmbeddable=true&key=AIzaSyAjLgxHRzYZCEPjnTvvi6uAdbBXlAYLeT0`
+      `https://youtube.googleapis.com/youtube/v3/search?part=snippet&q=${getSearch}&maxResults=50&order=date&type=video&videoEmbeddable=true&key=AIzaSyAO2UEuSKXxJpTQiI4PtD2zjrAbJqcYTHY`
     );
 
     let data = await res.json();
@@ -77,13 +85,20 @@ const displayRecommendedVideo = (videos) => {
                 ${title}
               </div>
               <span class="channel-name">${channelTitle}</span>
-            </div>`;
+            </div>
+             `;
 
     recommendVid_div.insertAdjacentHTML("afterbegin", otherHtml);
-    // recommendVid_div.onclick = () => {
-    //   // localStorage.setItem("clickedVideos", JSON.stringify(video));
-    //   RecommendedVideos();
-    // };
+    recommendVid_div.onclick = () => {
+      // window.location.href = "youtube.html";
+      console.log(channelTitle);
+      showVideo(videoId, channelTitle, title);
+      // const data_to_send = {
+      //   snippet,
+      //   videoId,
+      // };
+      // localStorage.setItem("clikedVideos", JSON.stringify(data_to_send));
+    };
     DOM_wrapper.append(recommendVid_div);
     console.log(recommendVid_div);
   });
