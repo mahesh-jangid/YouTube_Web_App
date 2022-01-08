@@ -868,9 +868,13 @@ section.content {
 section .container {
     margin-bottom: 3rem;
 }
+
 .navigator_cont{
     /* height: 6rem; */
-    padding: 1.5rem 2rem;
+     /* position: fixed; */
+     z-index: 999;
+    /* top: 3rem; */
+    padding: 1.2rem 2rem;
     border: 1px solid black;
     min-width: 100%;
     display: flex;
@@ -878,9 +882,10 @@ section .container {
     margin-bottom: 2rem;
     border-left: none;
     border-right: none;
-        background-color: #8080800d;
+        background-color: rgba(247, 243, 243, 0.353);
 }
-.navigator_cont button {
+
+.navigator_cont  button {
         padding: 0.5rem 1rem;
         margin: 0 .8rem;
         min-width: 120px;
@@ -890,10 +895,14 @@ section .container {
         transition: all .5s ease-in;
         font-size: 12px;
         font-weight: bold;
-        background-color: #faf1f10d;
+        background-color: rgb(250, 245, 245);
 }
+ .navigator_cont button.active {
+     background-color: rgb(49, 46, 46);
+     color: rgb(255, 255, 255);
+ }
 .navigator_cont button:hover {
-    background-color: rgb(83, 78, 78);
+    background-color: rgb(49, 46, 46);
     color: white;
 }
 .grid {
