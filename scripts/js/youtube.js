@@ -69,7 +69,7 @@ async function RecommendedVideos(getSearch) {
   try {
     // let video_query = document.querySelector("#video").value;
     let res = await fetch(
-      `https://youtube.googleapis.com/youtube/v3/search?part=snippet&q=${getSearch}&maxResults=50&order=date&type=video&videoEmbeddable=true&key=AIzaSyAjQhmvgUl_gT3Tz8wk06-E4sERAaBqoaY`
+      `https://youtube.googleapis.com/youtube/v3/search?part=snippet&chart=mostPopular&type=video&q=${getSearch}&maxResults=100&videoEmbeddable=true&key=AIzaSyA6heb66nzctlZHQAufckYrWxYVj-iUnTw`
     );
 
     let data = await res.json();
@@ -109,7 +109,7 @@ const displayRecommendedVideo = (videos) => {
 
     recommendVid_div.insertAdjacentHTML("afterbegin", otherHtml);
     recommendVid_div.onclick = () => {
-      window.location.href = "youtube.html";
+      // window.location.href = "youtube.html";
       showVideo(videoId, channelTitle, title);
     };
     DOM_wrapper.append(recommendVid_div);
